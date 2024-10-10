@@ -20,6 +20,8 @@ var vite_config_default = defineConfig({
       // '/apis':"http://localhost:3000"       
     }
   },
+  // optimizeDeps: { esbuildOptions: { target: "esnext" } }, // <-- Set this to resolve issue.
+  // plugins: [react(), remix(), tsconfigPaths()],
   plugins: [react()],
   // build: {
   //   target: "esnext"

@@ -21,6 +21,7 @@ export default defineConfig({
       // '/apis':"http://localhost:3000"       
     },
   },
-  plugins: [react()],
+  optimizeDeps: { esbuildOptions: { target: "esnext" } }, // <-- Set this to resolve issue.
+  plugins: [react(), remix(), tsconfigPaths()],
   
 })
