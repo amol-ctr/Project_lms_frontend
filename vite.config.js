@@ -14,7 +14,7 @@ export default defineConfig({
       // },
       '/api2': {
         // target: 'http://localhost:3000', // API server 2
-        target: 'https://project-lms-backend.vercel.app', // API server 2
+        target: 'https://project-lms-backend.onrender.com', // API server 2
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/api2/, '/api2/person'), // Optionally rewrite the path
       },
@@ -22,7 +22,5 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-  build: {
-    target: 'esnext',  // Targets modern browsers that support top-level await
-  },
+  
 })
