@@ -1,0 +1,73 @@
+export const chemistryQuestions = [
+    {
+      id: 1,
+      question: "What is the chemical formula for water?",
+      options: ["H₂O", "CO₂", "NaCl", "O₂"],
+      correctAnswer: 0,
+      subject: "Chemistry",
+    },
+    {
+      id: 2,
+      question: "Which gas is known as laughing gas?",
+      options: ["Nitrous oxide", "Carbon dioxide", "Oxygen", "Hydrogen"],
+      correctAnswer: 0,
+      subject: "Chemistry",
+    },
+    {
+      id: 3,
+      question: "What is the atomic number of carbon?",
+      options: ["6", "8", "12", "14"],
+      correctAnswer: 0,
+      subject: "Chemistry",
+    },
+    {
+      id: 4,
+      question: "Which element is the most abundant in the Earth's crust?",
+      options: ["Oxygen", "Silicon", "Aluminum", "Iron"],
+      correctAnswer: 0,
+      subject: "Chemistry",
+    },
+    {
+      id: 5,
+      question: "What is the pH value of pure water?",
+      options: ["7", "5", "9", "11"],
+      correctAnswer: 0,
+      subject: "Chemistry",
+    },
+    {
+      id: 6,
+      question: "Which compound is commonly known as table salt?",
+      options: ["NaCl", "KCl", "CaCO₃", "NaOH"],
+      correctAnswer: 0,
+      subject: "Chemistry",
+    },
+    {
+      id: 7,
+      question: "Which of the following is a noble gas?",
+      options: ["Helium", "Oxygen", "Nitrogen", "Hydrogen"],
+      correctAnswer: 0,
+      subject: "Chemistry",
+    },
+    {
+      id: 8,
+      question: "Which acid is commonly found in vinegar?",
+      options: ["Acetic acid", "Hydrochloric acid", "Sulfuric acid", "Citric acid"],
+      correctAnswer: 0,
+      subject: "Chemistry",
+    },
+    {
+      id: 9,
+      question: "What is the process of converting a liquid into gas called?",
+      options: ["Evaporation", "Condensation", "Sublimation", "Precipitation"],
+      correctAnswer: 0,
+      subject: "Chemistry",
+    },
+    {
+      id: 10,
+      question: "What is the chemical symbol for gold?",
+      options: ["Au", "Ag", "Pb", "Hg"],
+      correctAnswer: 0,
+      subject: "Chemistry",
+    },
+  ];
+  

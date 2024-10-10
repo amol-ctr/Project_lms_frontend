@@ -1,0 +1,270 @@
+.question-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    padding: 10px;
+    margin-right: 5px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn.save-next {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .btn.prev {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn.clear {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn.mark-review {
+    background-color: #ffc107;
+  }
+  
+  .btn.submit_new {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .marked {
+    background-color: #ffc107 !important;
+  }
+  
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .question-nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Adjust based on how many numbers you want per row */
+    gap: 5px;
+    margin-top: 20px;
+  }
+  
+  .question-nav button {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  /* Add a color for the "Not Visited" status */
+.question-nav button.not-visited {
+  background-color: #d3d3d3; /* Gray color for not visited */
+}
+
+/* Other states */
+.question-nav button.answered {
+  background-color: #0f0; /* Green for answered */
+}
+
+.question-nav button.marked-review {
+  background-color: #ff0; /* Yellow for marked review */
+}
+
+.question-nav button.answered-marked-review {
+  background-color: #800080; /* Purple for answered & marked review */
+}
+
+.question-nav button.active {
+  border: 2px solid #000; /* Black border for the active question */
+}
+
+
+  .question-nav button.answered {
+    background-color: #0f0; /* Green for answered */
+  }
+  
+  .question-nav button.not-answered {
+    background-color: #f00; /* Red for not answered */
+  }
+  
+  .question-nav button.marked-review {
+    background-color: #ff0; /* Yellow for marked for review */
+  }
+  
+  .question-nav button.answered-marked-review {
+    background-color: #800080; /* Purple for answered and marked for review */
+  }
+  
+  /* Add a color for the "Not Visited" status */
+.question-nav button.not-visited {
+  background-color: #d3d3d3; /* Gray color for not visited */
+}
+
+/* Color for "Visited but Not Answered" (Red) */
+.question-nav button.visited-not-answered {
+  background-color: #ff4c4c; /* Red for visited but not answered */
+}
+  
+  .question-nav button.active {
+    border: 2px solid #000; /* Highlight current question */
+  }
+  
+  /* Status legend styling */
+  .status-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .status-legend div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .status-legend span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+  
+  .not-visited {
+    background-color: #ddd;
+  }
+  
+  .not-answered {
+    background-color: #f00;
+  }
+  
+  .answered {
+    background-color: #0f0;
+  }
+  
+  .marked-review {
+    background-color: #ff0;
+  }
+  
+  .answered-marked-review {
+    background-color: purple;
+  }
+
+  /* The main container for the test */
+.test-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  /* Add a border or background color for testing layout */
+  background-color: #f9f9f9;
+}
+
+/* Left section should take most of the width */
+.left-section {
+  width: 70%; /* Adjust this percentage to control how much space the question area takes */
+  padding-right: 20px;
+}
+
+/* Right section should be placed on the right and take less width */
+.right-section {
+  width: 25%; /* Adjust this percentage to control the nav panel width */
+  padding: 10px;
+  background-color: #fff; /* To simulate the white panel background like the image */
+  border: 1px solid #ccc; /* Optional: for a subtle border around the panel */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* To add a subtle shadow like the image */
+}
+
+/* Question navigation buttons */
+.question-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* You can change the number to control how many boxes per row */
+  gap: 5px;
+  margin-top: 20px;
+}
+
+/* Question navigation button styling */
+.question-nav button {
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-legend {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.status-legend div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.status-legend span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .test-container {
+    flex-direction: column;
+  }
+
+  .left-section, .right-section {
+    width: 100%; /* Take full width on smaller screens */
+  }
+
+  .right-section {
+    margin-top: 20px;
+  }
+}
+
+/* QuestionNav.css */
+.question-btn {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.answered {
+  background-color: green; /* Answered */
+}
+
+.marked-review {
+  background-color: yellow; /* Marked for Review */
+}
+
+.answered-marked-review {
+  background-color: purple; /* Answered and Marked for Review */
+}
+
+.not-answered {
+  background-color: red; /* Visited but not answered */
+}
+
+.not-visited {
+  background-color: grey; /* Not visited */
+}
+
+
+  
