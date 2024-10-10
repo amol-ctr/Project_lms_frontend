@@ -22,7 +22,11 @@ export default defineConfig({
       // '/apis':"http://localhost:3000"       
     },
   },
-  optimizeDeps: { esbuildOptions: { target: "esnext" } }, // <-- Set this to resolve issue.
-  plugins: [react(), remix(), tsconfigPaths()],
+  // optimizeDeps: { esbuildOptions: { target: "esnext" } }, // <-- Set this to resolve issue.
+  plugins: [react()],
+  build: {
+    target: "esnext"
+    // Targets modern browsers that support top-level await
+  }
   
 })
