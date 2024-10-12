@@ -1,8 +1,4 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This Project consists of a mock test interface which is authenticated via JWT.
+It has features such as "MARK FOR REVIEW" Button as well as a question palette for navigation as well as a test summary containing subject wise scores and total score.
+This learning management system consists of PYQs for each subject as well for student's help.
+User authentication routes include signup,login,logout,profile section
