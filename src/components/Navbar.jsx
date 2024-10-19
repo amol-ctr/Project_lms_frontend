@@ -1,7 +1,18 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState,useEffect } from 'react';
+import { Link,useLocation } from 'react-router-dom';
 
 function Navbar() {
+    const location = useLocation();
+
+    // Scroll to the hash section when the location changes
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.getElementById(location.hash.substring(1)); // Get the element by ID
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the element
+            }
+        }
+    }, [location]); // Run the effect whenever the location changes
 
     return (
         <div className="navbar bg-neutral text-neutral-content">
@@ -13,7 +24,7 @@ function Navbar() {
                     <Link to='/instructions'>Take Mock Test</Link>
                 </div>
                 <div className=' ml-20 hover:underline'>
-                    <a href='#cards'>Featured PYQs</a>
+                    <Link to='/#cards'>Featured PYQs</Link>
                 </div>
                 <div className="flex-none">
                     {/* <div className="dropdown dropdown-end">
