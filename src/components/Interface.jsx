@@ -6,6 +6,7 @@ import TestSummary from "./interface_components/TestSummary";
 import { questions } from "./data/questions";
 import './Interface.css';
 import { useNavigate } from "react-router-dom"; // Assuming react-router-dom is used for routing
+import {jwtDecode} from 'jwt-decode';
 
 function Interface() {
   const navigate = useNavigate();
@@ -26,31 +27,30 @@ function Interface() {
   // Check if token exists in localStorage
   useEffect(() => {
     const token = localStorage.getItem("authToken");
-
-    // If token is not present, redirect to login
+  
     if (!token) {
-      navigate("/login"); // Redirect user to login page if no token found
+      navigate("/login"); // Redirect to login if no token
     } else {
-      // Optionally, validate token with an API call here (if required)
-      fetch('/api/validateToken', {
-        method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-        },
-      })
-      .then(res => {
-        if (!res.ok) {
-          throw new Error("Invalid token");
-        }
-      })
-      .catch(() => {
-        // If token validation fails, redirect to login
+      try {
+        // Decode the token to check expiration (assuming it's a JWT)
+        const decodedToken = jwtDecode(token);
+        const currentTime = Date.now() / 1000; // Current time in seconds
+  
+        if (decodedToken.exp < currentTime) {
+          // Token has expired, remove it and redirect to login
+          localStorage.removeItem("authToken");
+          navigate("/login");
+        } // else {
+        //   // Token is valid, proceed as normal
+        //   // Optionally, you can set a state for a successful validation
+        // }
+      } catch (error) {
+        // If there's an error decoding the token, treat it as invalid
         localStorage.removeItem("authToken");
         navigate("/login");
-      });
+      }
     }
   }, [navigate]);
-
   // Save state to localStorage when any of these change
   useEffect(() => {
     localStorage.setItem("answers", JSON.stringify(answers));

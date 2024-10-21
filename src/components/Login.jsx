@@ -34,33 +34,48 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();     // makes sure form doesnt reload on submit
         console.log(user);
-        alert('Succesfully Logged in!');
-        var token = localStorage.getItem('authToken');
-        const response = await fetch(`/api2/person/login`, {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${token}`,
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(user)
-        });
+        try {
+            
+            var token = localStorage.getItem('authToken');
+            const response = await fetch(`/api2/person/login`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(user)
+            });
+            // Clear any previously stored state before login
+            localStorage.removeItem('answers');
+            localStorage.removeItem('currentQuestionIndex');
+            localStorage.removeItem('markedForReview');
+            localStorage.removeItem('visitedQuestions');
+            
+            const data = await response.json(); // Parse the response
+            // Assuming the token comes back in the response as data.token
+            token = data.token; 
+            if(!token){
+                alert('Invalid credentials !');
+            }
+            else{
 
-        // Clear any previously stored state before login
-        localStorage.removeItem('answers');
-        localStorage.removeItem('currentQuestionIndex');
-        localStorage.removeItem('markedForReview');
-        localStorage.removeItem('visitedQuestions');
+                localStorage.setItem('authToken', token);
+                
+                console.log(token);
+                console.log(response);
+                
+                alert('Succesfully Logged in!');
+                if(response)
+                navigate('/');
+            }
+    
+            // Store the token in localStorage or sessionStorage
+        } 
+        catch (err) {
+            console.log(err);
+            alert('Invalid credentials !');
+        }
 
-        const data = await response.json(); // Parse the response
-        // Assuming the token comes back in the response as data.token
-        token = data.token; 
-
-        // Store the token in localStorage or sessionStorage
-        localStorage.setItem('authToken', token);
-
-        console.log(token);
-        console.log(response);
-        navigate('/');
     }
 
     return (
