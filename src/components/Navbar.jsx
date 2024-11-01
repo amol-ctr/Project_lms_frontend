@@ -57,7 +57,8 @@ function Navbar() {
                             </div>
                         </div>
                     </div> */}
-                    <div className="dropdown dropdown-end ml-96 pl-96 pr-0 right-1 bottom-1">
+                    {/* ml-96 pl-96*/}
+                    <div className="dropdown dropdown-end absolute right-1 top-2">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 <img

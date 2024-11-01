@@ -14,8 +14,8 @@ export default defineConfig({
       //   // rewrite: (path) => path.replace(/^\/api/, '/api'), // Optionally rewrite the path
       // },
       '/api2': {
-        // target: 'http://localhost:3000', // API server 2
-        target: 'https://project-lms-backend.onrender.com', // API server 2
+        target: 'http://localhost:3000', // API server 2
+        // target: 'https://project-lms-backend.onrender.com', // API server 2
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/api2/, '/api2/person'), // Optionally rewrite the path
       },

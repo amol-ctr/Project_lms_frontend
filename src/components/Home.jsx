@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState,useEffect } from 'react';
 import Slider from 'react-slick';
 import './Home.css';
+import Chatbot from './chatbot';
 
 // Function for the Slider in the Benefits section
 // function SimpleSlider() {
@@ -73,6 +74,7 @@ const Home = () => {
                 </div>
             </header>
 
+            <Chatbot/>
             {/* Benefits Section with Slider */}
             <h2 className="section-title text-center">Benefits of Taking Mock Tests</h2>
 
@@ -138,7 +140,6 @@ const Home = () => {
                 </div>
 
             </section>
-
             
         </div>
     );

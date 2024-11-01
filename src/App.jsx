@@ -12,6 +12,7 @@ import Instructions from './components/Instructions'
 import Physics_interface from './components/Physics_interface'
 import Maths_interface from './components/Maths_interface'
 import Chem_interface from './components/Chem_interface'
+import Chatbot from './components/chatbot'
 
 function App() {
 
