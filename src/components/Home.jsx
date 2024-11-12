@@ -49,17 +49,17 @@ const Home = () => {
                     <p>Gain confidence by simulating the exam environment.</p>
                 </div>
                 <div className="benefit-item ml-16">
-                    <img src="./../../src/assets/img/analytics icon.png" alt="Analysis Icon" className=' ml-20' />
+                    <img src={"static/img/analytics icon.png"} alt="Analysis Icon" className=' ml-20' />
                     <h3>Identify Weaknesses</h3>
                     <p>Focus on the areas that need improvement.</p>
                 </div>
                 <div className="benefit-item ml-16">
-                    <img src="./../../src/assets/img/time.png" alt="Time Management Icon" className=' ml-20'/>
+                    <img src={"static/img/time.png"} alt="Time Management Icon" className=' ml-20'/>
                     <h3>Time Management</h3>
                     <p>Practice efficient time management in real exam conditions.</p>
                 </div>
                 <div className="benefit-item ml-16">
-                    <img src="./../../src/assets/img/track.webp" alt="Progress Icon" className=' ml-20'/>
+                    <img src={"static/img/track.webp"} alt="Progress Icon" className=' ml-20'/>
                     <h3>Track Progress</h3>
                     <p>Monitor your progress with detailed reports and analytics.</p>
                 </div>
@@ -73,7 +73,7 @@ const Home = () => {
                 <div className="flashcards-wrapper" id="cards" style={{ transform: `translateX(-${currentCardIndex * 10}%)`  }}>
 
                     <div className="test-card">
-                        <img src="./../../src/assets/img/maths.jpg" alt="Math Test" className="test-image" />
+                        <img src={"static/img/maths.jpg"} alt="Math Test" className="test-image" />
                         <div className="test-content">
                             <h3>MATHEMATICS</h3>
                             <p>Previous year questions covering Algebra, Geometry, and more.</p>
@@ -81,7 +81,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="test-card">
-                        <img src="./../../src/assets/img/physics.jpg" alt="Physics Test" className="test-image" />
+                        <img src={"static/img/physics.jpg"} alt="Physics Test" className="test-image" />
                         <div className="test-content">
                             <h3>PHYSICS</h3>
                             <p>Improve your score in every topic of Physics through these previous year questions</p>
@@ -89,7 +89,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="test-card">
-                        <img src="./../../src/assets/img/chemistry_icon.jpg" alt="Chemistry Test" className="test-image" />
+                        <img src={"static/img/chemistry_icon.jpg"} alt="Chemistry Test" className="test-image" />
                         <div className="test-content">
                             <h3>CHEMISTRY</h3>
                             <p>Contains previous year questions on physical, organic as well as inorganic chemistry</p>
@@ -110,7 +110,7 @@ const Home = () => {
                 <div className="flashcards-wrapper" id="cards2" style={{ transform: `translateX(-${currentCardIndex * 10}%)`  }}>
 
                     <div className="test-card">
-                        <img src="./../../src/assets/img/g_tewani.webp" alt="Math Test" className="test-image" />
+                        <img src={"static/img/g_tewani.webp"} alt="Math Test" className="test-image" />
                         <div className="test-content">
                             <h3>G Tewani:JEE Mains Mathematics</h3>
                             <h3 className=' bg-red-300'>Only for ₹2,499</h3>
@@ -118,7 +118,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="test-card">
-                        <img src="./../../src/assets/img/hc_verma.webp" alt="Physics Test" className="test-image" />
+                        <img src={"static/img/hc_verma.webp"} alt="Physics Test" className="test-image" />
                         <div className="test-content">
                             <h3>H.C. Verma:JEE Mains Physics</h3>
                             <h3 className=' bg-red-300'>Only for ₹1,354</h3>
@@ -126,7 +126,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="test-card">
-                        <img src="./../../src/assets/img/op_tandon.webp" alt="Chemistry Test" className="test-image" />
+                        <img src={"static/img/op_tandon.webp"} alt="Chemistry Test" className="test-image" />
                         <div className="test-content">
                             <h3>O.P. Tandon:JEE Mains Chemistry</h3>
                             <h3 className=' bg-red-300'>Only for ₹1,499</h3>

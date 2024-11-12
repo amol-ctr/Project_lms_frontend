@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import person from './../../src/assets/img/person.png';
-import email from './../../src/assets/img/email.png';
-import password from './../../src/assets/img/password.png';
-import twitter from './../../src/assets/img/twitter_icon.png';
-import facebook from './../../src/assets/img/facebook_icon.png';
-import github from './../../src/assets/img/github.png';
+// import person from 'static/img/person.png';
+// import email from 'static/img/email.png';
+// import password from 'static/img/password.png';
+// import twitter from 'static/img/twitter_icon.png';
+// import facebook from 'static/img/facebook_icon.png';
+// import github from 'static/img/github.png';
 import { BrowserRouter as Router, Route, Link, Routes, useNavigate } from "react-router-dom";
 import './Signup.css';
 
@@ -65,19 +65,19 @@ function Signup() {
                 <div className='inputs'>
                     <label htmlFor='name' className='ml-20'>Username</label>
                     <div className='input'>
-                        <img src={person} alt="" />
+                        <img src={'static/img/person.png'} alt="" />
                         <input autoComplete='off' onChange={handleInput} type="text" placeholder='Type your name' name='name' id='name' value={user.name} required />
                     </div>
 
                     <label htmlFor='email' className='ml-20'>Email</label>
                     <div className='input'>
-                        <img src={email} alt="" />
+                        <img src={'static/img/email.png'} alt="" />
                         <input autoComplete='off' onChange={handleInput} type="email" placeholder='Email Id' name='email' id='email' value={user.email} required />
                     </div>
 
                     <label htmlFor='password' className='ml-20'>Password</label>
                     <div className='input'>
-                        <img src={password} alt="" />
+                        <img src={'static/img/password.png'} alt="" />
                         <input autoComplete='off' onChange={handleInput} type="password" placeholder='Type your password' name='password' id='password' value={user.password} required />
                     </div>
                 </div>
@@ -88,13 +88,13 @@ function Signup() {
                     <p align="center">Or Signup using:</p>
                     <span className='social_media_icons'>
                         <a href="https://www.twitter.com">
-                            <img src={twitter} width="40px" height="40px" alt="" />
+                            <img src={'static/img/twitter_icon.png'} width="40px" height="40px" alt="" />
                         </a>
                         <a href="https://www.facebook.com">
-                            <img src={facebook} width="40px" height="40px" alt="" />
+                            <img src={'static/img/facebook_icon.png'} width="40px" height="40px" alt="" />
                         </a>
                         <a href="https://www.github.com">
-                            <img src={github} width="40px" height="40px" alt="" />
+                            <img src={'static/img/github.png'} width="40px" height="40px" alt="" />
                         </a>
                     </span>
 
