@@ -12,7 +12,7 @@ import Instructions from './components/Instructions'
 import Physics_interface from './components/Physics_interface'
 import Maths_interface from './components/Maths_interface'
 import Chem_interface from './components/Chem_interface'
-import Chatbot from './components/chatbot'
+import PaymentPage from './components/payment_components/PaymentPage'
 
 function App() {
 
@@ -31,6 +31,7 @@ function App() {
           <Route path="/physics_pyqs" element={<><Navbar/><Physics_interface/><Footer/></>} />                
           <Route path="/math_pyqs" element={<><Navbar/><Maths_interface/><Footer/></>} />                
           <Route path="/chemistry_pyqs" element={<><Navbar/><Chem_interface/><Footer/></>} />                
+          <Route path="/payment/:ID" element={<PaymentPage/>} />                
         </Routes>
 
         
